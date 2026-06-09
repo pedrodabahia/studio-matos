@@ -3,7 +3,6 @@ import '@splinetool/viewer';
 import { ArrowRight, Sparkles } from "lucide-react";
 import { useRef } from "react";
 
-
 export function Hero() {
   const ref = useRef(null);
 

@@ -1,5 +1,6 @@
 import { motion } from "motion/react";
 import { useEffect, useState } from "react";
+import TesteAmimado from '../components/testeAninação'
 
 interface LoadingScreenProps {
   onComplete: () => void;
@@ -30,18 +31,12 @@ export function LoadingScreen({ onComplete }: LoadingScreenProps) {
       <div className="relative">
         {stage >= 1 && (
           <motion.div
-            className="text-center"
+            className=" flex flex-col justify-center text-center"
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            <motion.h1
-              className="mb-8 bg-gradient-to-r from-[#00ff88] to-[#00cc6a] bg-clip-text text-6xl font-bold tracking-tight text-transparent"
-              style={{ fontFamily: "'Space Grotesk', sans-serif" }}
-            >
-              Studio Matos
-            </motion.h1>
-
+                  <TesteAmimado /> 
             <div className="h-1 w-64 mx-auto bg-[#1a1a1a] rounded-full overflow-hidden">
               <motion.div
                 className="h-full bg-gradient-to-r from-[#00ff88] to-[#00cc6a]"
@@ -49,22 +44,13 @@ export function LoadingScreen({ onComplete }: LoadingScreenProps) {
                 animate={{ width: "100%" }}
                 transition={{ duration: 1.5, ease: "easeInOut" }}
               />
+              
             </div>
           </motion.div>
         )}
 
-        {stage >= 2 && (
-          <motion.p
-            className="absolute -bottom-16 left-1/2 -translate-x-1/2 whitespace-nowrap text-xl text-white/80"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
-            Nós não criamos sites. Criamos presença.
-          </motion.p>
-        )}
 
-        <div className="pointer-events-none absolute inset-0 -z-10">
+        <div className="pointer-events-none fixed w-[100vw] h-[100vh] top-0 inset-0 left-[0vw] -z-10">
           {[...Array(50)].map((_, i) => (
             <motion.div
               key={i}
@@ -85,6 +71,7 @@ export function LoadingScreen({ onComplete }: LoadingScreenProps) {
           ))}
         </div>
       </div>
+  
     </motion.div>
   );
 }

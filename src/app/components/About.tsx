@@ -83,7 +83,7 @@ export function About() {
             <div className="relative aspect-square overflow-hidden rounded-2xl border border-[#00ff88]/30 bg-gradient-to-br from-[#00ff88]/10 to-transparent p-1">
               <div className="flex h-full w-full items-center justify-center rounded-xl bg-black/50">
                 <div className="text-center">
-                    <img className="h-160 mt-12" alt="Pedro Matos" src={imagePessoal} />
+                    <img className="h-100 sm:h-140 mt-12" alt="Pedro Matos" src={imagePessoal} />
                 </div>
               </div>
             </div>
