@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { AnimatePresence } from "motion/react";
 import { LoadingScreen } from "./app/components/LoadingScreen.tsx";
-import { AnimatedBackground } from "./app/components/AnimatedBackground";
 import { CustomCursor } from "./app/components/CustomCursor";
 import { Navbar } from "./app/components/Navbar";
 import { ScrollToTop } from "./app/components/ScrollToTop";
@@ -33,7 +32,6 @@ export default function App() {
       {!isLoading && (
         <div className="relative min-h-screen bg-black text-white">
           <CustomCursor />
-          <AnimatedBackground />
           <Navbar />
           <ScrollToTop />
 

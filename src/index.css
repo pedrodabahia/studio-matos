@@ -2,6 +2,11 @@
 @import './styles/tailwind.css';
 @import './styles/theme.css';
 
+html,body{
+  overflow-x: hidden;
+}
+
+
 @layer base {
   :root {
     --text: #6b6375;
